@@ -41,7 +41,6 @@ beijingTimeElement.innerHTML = moment().tz("Asia/Manila").format("h:mm:ss [<smal
 
 
 //js for choose city
-
 function updateCity(event){
     if (event.target.value.length > 0) {
     let cityTimezone = event.target.value;
@@ -57,12 +56,14 @@ function updateCity(event){
         </div>
             <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
         </div>
+        <a href="index.html">Back to Loadscreen</a>
     `;
 }
 }
 
 updateTime();
 setInterval(updateTime, 1000);
+
 
 let citiesSelectElement = document.querySelector("#select-clock");
 citiesSelectElement.addEventListener("change", updateCity);
