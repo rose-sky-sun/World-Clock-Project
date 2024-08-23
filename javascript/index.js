@@ -54,12 +54,13 @@ function updateCity(event){
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("ddd, Do MMMM, YYYY")}</div>
         </div>
-            <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
+            <div class="time">${cityTime.format("h:mm")} <small>${cityTime.format("A")}</small></div>
         </div>
         <a href="index.html" id="refresh">Back to Loadscreen</a>
     `;
+};
 }
-}
+
 
 updateTime();
 setInterval(updateTime, 1000);
